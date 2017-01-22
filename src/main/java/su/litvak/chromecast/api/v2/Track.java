@@ -16,12 +16,14 @@
 package su.litvak.chromecast.api.v2;
 
 import org.codehaus.jackson.annotate.JsonProperty;
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
 /**
  * Track meta data information
  *
  * @see <a href="https://developers.google.com/cast/docs/reference/receiver/cast.receiver.media.Track">https://developers.google.com/cast/docs/reference/receiver/cast.receiver.media.Track</a>
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Track {
     /**
      * Media track type

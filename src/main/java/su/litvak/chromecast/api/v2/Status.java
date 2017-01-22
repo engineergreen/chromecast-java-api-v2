@@ -17,6 +17,7 @@ package su.litvak.chromecast.api.v2;
 
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.annotate.JsonProperty;
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
 import java.util.Collections;
 import java.util.List;
@@ -24,6 +25,7 @@ import java.util.List;
 /**
  * Current ChromeCast device status
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Status {
     public final Volume volume;
     public final List<Application> applications;

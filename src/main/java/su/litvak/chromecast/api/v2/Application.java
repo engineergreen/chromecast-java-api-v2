@@ -16,6 +16,7 @@
 package su.litvak.chromecast.api.v2;
 
 import org.codehaus.jackson.annotate.JsonProperty;
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
 import java.util.Collections;
 import java.util.List;
@@ -23,6 +24,7 @@ import java.util.List;
 /**
  * Application descriptor
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Application {
     public final String id;
     public final String name;

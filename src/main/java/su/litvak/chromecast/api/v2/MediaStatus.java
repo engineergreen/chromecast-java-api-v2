@@ -20,12 +20,14 @@ import java.util.List;
 import java.util.Map;
 
 import org.codehaus.jackson.annotate.JsonProperty;
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
 /**
  * Current media player status - which media is played, volume, time position, etc.
  *
  * @see <a href="https://developers.google.com/cast/docs/reference/receiver/cast.receiver.media.MediaStatus">https://developers.google.com/cast/docs/reference/receiver/cast.receiver.media.MediaStatus</a>
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class MediaStatus {
     /**
      * Playback status

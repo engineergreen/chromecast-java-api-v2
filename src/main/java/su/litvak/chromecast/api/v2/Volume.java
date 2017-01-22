@@ -18,12 +18,14 @@ package su.litvak.chromecast.api.v2;
 import java.util.Arrays;
 
 import org.codehaus.jackson.annotate.JsonProperty;
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 
 /**
  * Volume settings
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Volume {
     final static Float default_increment = new Float(0.05);
     @JsonProperty
